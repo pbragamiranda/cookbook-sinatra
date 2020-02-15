@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2> Welcome to the Cookbook!</h2>
+<img src="cookbook.png" alt="CookBook">
+<h2> -------------------------------------</h2>
+<a href="/new_recipe">Add New Recipe</a>
+<h2> -------------------------------------</h2>
+
+<ul>
+  <% @recipes.each do |recipe| %>
+    <li>
+      <%= recipe.name %>
+      <p>Preparation Time -->  <%= recipe.prep_time %></p>
+      <p>Difficulty  -->  <%= recipe.diff %></p>
+      <p><%= recipe.description %></p>
+      <p><a href="/new_recipe"> DESTROY </a></p>
+    </li>
+  <% end %>
+</ul>
+
+</body>
+</html>
+
+<!-- <a href="action="/destroy"a> -->
